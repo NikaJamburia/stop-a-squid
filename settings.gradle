@@ -1,0 +1,5 @@
+include 'core'
+include 'core:common'
+include 'core:gear'
+findProject(':core:gear')?.name = 'gear'
+

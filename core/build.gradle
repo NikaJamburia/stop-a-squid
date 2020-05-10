@@ -1,0 +1,21 @@
+project(":core") {
+    description = 'Core modules'
+}
+
+subprojects {
+    dependencies {
+        compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.15.Final'
+    }
+}
+
+project(":core:common") {
+    description = 'Core common classes'
+}
+
+project(":core:gear") {
+    description = 'Core modules'
+
+    dependencies {
+        implementation project(':core:common')
+    }
+}
